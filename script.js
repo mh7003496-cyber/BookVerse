@@ -4,14 +4,14 @@ let books = [
   { title: "Atomic Habits", genre: "history", price: 20 },
   { title: "The Hobbit", genre: "fantasy", price: 18 },
 
-  // Homepage books
+  
   { title: "To Kill a Mockingbird", genre: "fiction", price: 14 },
   { title: "1984", genre: "fiction", price: 13 },
   { title: "Pride and Prejudice", genre: "romance", price: 12 },
   { title: "The Catcher in the Rye", genre: "fiction", price: 10 }
 ];
 
-// ========== DISPLAY BOOKS (BOOKSTORE PAGE) ==========
+// DISPLAYs the  BOOKS //
 function showBooks() {
   if (!$("#bookList").length) return;
 
@@ -35,7 +35,7 @@ function showBooks() {
 $(document).on("change", "#genreFilter", showBooks);
 $(document).ready(showBooks);
 
-// ========== CART SYSTEM ==========
+// The CART SYSTEM //
 let cart = {};
 
 function addToCart(title) {
@@ -54,7 +54,7 @@ function updateCart() {
   }
 }
 
-// ========== HOMEPAGE ADD-TO-CART BUTTONS ==========
+//  HOMEPAGE to ADD to CART //
 $(document).ready(function () {
   $(".book-card .add-to-cart").click(function () {
       let title = $(this).siblings(".book-title").text();
@@ -62,7 +62,7 @@ $(document).ready(function () {
   });
 });
 
-// ========== SEARCH PAGE ==========
+// SEARCH PAGE //
 $("#searchBtn").click(function () {
   if (!$("#searchResults").length) return;
 
@@ -83,7 +83,7 @@ $("#searchBtn").click(function () {
   });
 });
 
-// ========== SLIDER (HOMEPAGE) ==========
+//HOMEPAGE slid // 
 let image = ["img/crazysale.webp", "img/palestine.webp"];
 let currentindex = 0;
 
