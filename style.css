@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.top-menu {
+  background: #333;
+  padding: 10px;
+}
+
+.top-menu a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#bookList .book-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+#cartList div {
+  background: #f0f0f0;
+  padding: 8px;
+  margin: 5px 0;
+}
