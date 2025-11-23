@@ -2,50 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="homepage.css">
+    <title>Book Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
     <nav class="top-menu">
-        <a href="Homepage.html">Home</a>
+        <img src="img/logo.png" height="40">
+        <a href="file 2 index.html">Home</a>
         <a href="index.html">Book Store</a>
         <a href="search.html">Search</a>
-        <a href="index.html#cartSection">Cart</a>
+        <a href="#cartSection">Cart</a>
     </nav>
 </header>
 
-<section class="slider-container">
-    <img id="image-slider" src="img/crazysale.webp" alt="Slider">
-</section>
+<h1>Book Store</h1>
 
-<section class="books-section">
-    <div class="book-card">
-        <img src="img/mockingbird.jpg">
-        <h3 class="book-title">To Kill a Mockingbird</h3>
-        <button class="add-to-cart">Add to Cart</button>
-    </div>
+<div id="filters">
+    <select id="genreFilter">
+        <option value="all">All Genres</option>
+        <option value="fiction">Fiction</option>
+        <option value="romance">Romance</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="history">History</option>
+    </select>
+</div>
 
-    <div class="book-card">
-        <img src="img/1984.jpg">
-        <h3 class="book-title">1984</h3>
-        <button class="add-to-cart">Add to Cart</button>
-    </div>
-
-    <div class="book-card">
-        <img src="img/pride.jpg">
-        <h3 class="book-title">Pride and Prejudice</h3>
-        <button class="add-to-cart">Add to Cart</button>
-    </div>
-
-    <div class="book-card">
-        <img src="img/catcher.jpg">
-        <h3 class="book-title">The Catcher in the Rye</h3>
-        <button class="add-to-cart">Add to Cart</button>
-    </div>
-</section>
+<section id="bookList"></section>
 
 <section id="cartSection">
     <h2>Your Cart</h2>
@@ -54,6 +37,5 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>

@@ -1,96 +1,108 @@
+let products = [];
+function loadProducts() {
+  fetch('products.json').then(r => {
+    if (!r.ok) throw new Error('no json');
+    return r.json();
+  }).then(data => {
+    const all = [];
+    if (Array.isArray(data.categories)) {
+      data.categories.forEach(cat => {
+        const genreKey = (cat.name || '').toLowerCase();
+        if (Array.isArray(cat.books)) {
+          cat.books.forEach(b => {
+            const book = {
+              title: b.title || '',
+              author: b.author || '',
+              genre: genreKey,
+              price: (b.priceValue || 0),
+              priceText: b.price || '',
+              image: b.image || ''
+            };
+            all.push(book);
+          });
+        }
+      });
+    }
+    products = all;
+    renderBookList();
+  }).catch(() => {
+    products = [];
+    renderBookList();
+  });
+}
 
-let books = [
-  { title: "Harry Potter", genre: "fantasy", price: 15 },             
-  { title: "Atomic Habits", genre: "history", price: 20 },
-  { title: "The Hobbit", genre: "fantasy", price: 18 },
-
-  
-  { title: "To Kill a Mockingbird", genre: "fiction", price: 14 },
-  { title: "1984", genre: "fiction", price: 13 },
-  { title: "Pride and Prejudice", genre: "romance", price: 12 },
-  { title: "The Catcher in the Rye", genre: "fiction", price: 10 }
-];
-
-// DISPLAYs the  BOOKS //
-function showBooks() {
-  if (!$("#bookList").length) return;
-
-  let f = $("#genreFilter").val();
-  $("#bookList").html("");
-
-  books.forEach(b => {
-    if (f === "all" || f === b.genre) {
-      $("#bookList").append(`
-        <div class="book-item">
-          <h3>${b.title}</h3>
-          <p>Genre: ${b.genre}</p>
-          <p>Price: $${b.price}</p>
-          <button onclick="addToCart('${b.title}')">Add to Cart</button>
-        </div>
-      `);
+function renderBookList() {
+  const root = document.getElementById('bookList');
+  if (!root) return;
+  const select = document.getElementById('genreFilter');
+  const g = select ? select.value : 'all';
+  root.innerHTML = '';
+  products.forEach(p => {
+    const genreKey = (p.genre || '').toLowerCase();
+    if (g === 'all' || genreKey.includes(g)) {
+      const div = document.createElement('div');
+      div.className = 'book-item';
+      const imgHtml = p.image ? `<img src="${p.image}" alt="${escapeHtml(p.title)}">` : '';
+      div.innerHTML = `<h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.author)}</p><p>Price: $${p.price}</p>${imgHtml}<div style="margin-top:8px;"><button onclick="addToCart('${escapeJs(p.title)}')">Add to Cart</button></div>`;
+      root.appendChild(div);
     }
   });
 }
 
-$(document).on("change", "#genreFilter", showBooks);
-$(document).ready(showBooks);
+function escapeHtml(s) {
+  if (s === null || s === undefined) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 
-// The CART SYSTEM //
-let cart = {};
+function escapeJs(s) {
+  if (s === null || s === undefined) return '';
+  return String(s).replace(/'/g, "\\'");
+}
 
+document.addEventListener('change', function(e){
+  if (e.target && e.target.id === 'genreFilter') renderBookList();
+});
+
+document.addEventListener('DOMContentLoaded', function(){
+  loadProducts();
+  bindHomepageAddButtons();
+  bindSearch();
+  updateCart();
+  startSlider();
+});
+let cart = [];
+
+// Add item to cart (shows duplicates separately)
 function addToCart(title) {
-  cart[title] = (cart[title] || 0) + 1;
+  cart.push(title);
   updateCart();
 }
 
+// Remove one item from the cart (by index)
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+// Display cart items
 function updateCart() {
-  if (!$("#cartList").length) return;
+  const el = document.getElementById('cartList');
+  if (!el) return;
+  el.innerHTML = '';
 
-  $("#cartList").html("");
-  for (let item in cart) {
-    $("#cartList").append(`
-      <div>${item} — Quantity: ${cart[item]}</div>
-    `);
+  if (cart.length === 0) {
+    el.innerHTML = '<p>Your cart is empty.</p>';
+    return;
   }
-}
 
-//  HOMEPAGE to ADD to CART //
-$(document).ready(function () {
-  $(".book-card .add-to-cart").click(function () {
-      let title = $(this).siblings(".book-title").text();
-      addToCart(title);
+  cart.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+      ${escapeHtml(item)}
+      <button onclick="removeFromCart(${index})" style="margin-left:10px;color:red;">
+        Remove
+      </button>
+    `;
+    el.appendChild(div);
   });
-});
-
-// SEARCH PAGE //
-$("#searchBtn").click(function () {
-  if (!$("#searchResults").length) return;
-
-  let q = $("#searchInput").val().toLowerCase();
-  $("#searchResults").html("");
-
-  books.forEach(b => {
-    if (b.title.toLowerCase().includes(q)) {
-      $("#searchResults").append(`
-        <div class="book-item">
-            <h3>${b.title}</h3>
-            <p>Genre: ${b.genre}</p>
-            <p>Price: $${b.price}</p>
-            <button onclick="addToCart('${b.title}')">Add to Cart</button>
-        </div>
-      `);
-    }
-  });
-});
-
-//HOMEPAGE slid // 
-let image = ["img/crazysale.webp", "img/palestine.webp"];
-let currentindex = 0;
-
-function updateimage() {
-  const slider = document.getElementById("image-slider");
-  currentindex = (currentindex + 1) % image.length;
-  slider.src = image[currentindex];
 }
-
-setInterval(updateimage, 3000);

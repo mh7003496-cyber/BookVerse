@@ -1,0 +1,204 @@
+{
+  "categories": [
+    {
+      "name": "Classic Literature",
+      "books": [
+        {
+          "title": "The Great Gatsby",
+          "author": "F. Scott Fitzgerald",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/TheGreatGatsby.jpg"
+        },
+        {
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/pride.webp"
+        },
+        {
+          "title": "The Sea-Wolf",
+          "author": "Jack London",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/the-sea.webp"
+        },
+        {
+          "title": "Jane Eyre",
+          "author": "Charlotte Brontë",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/jane-eyre.jpg"
+        },
+        {
+          "title": "Wuthering Heights",
+          "author": "Emily Brontë",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/Heights.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Historical Fiction",
+      "books": [
+        {
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/kill-bird.jpg"
+        },
+        {
+          "title": "The Book Thief",
+          "author": "Markus Zusak",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/thief.jpg"
+        },
+        {
+          "title": "All the Light We Cannot See",
+          "author": "Anthony Doerr",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/night.jpg"
+        },
+        {
+          "title": "A Tale of Two Cities",
+          "author": "Charles Dickens",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/tale.jpg"
+        },
+        {
+          "title": "The Kite Runner",
+          "author": "Khaled Hosseini",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/kite.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Dystopian Fiction",
+      "books": [
+        {
+          "title": "1984",
+          "author": "George Orwell",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/1984.jpg"
+        },
+        {
+          "title": "Brave New World",
+          "author": "Aldous Huxley",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/brave.jpg"
+        },
+        {
+          "title": "Fahrenheit 451",
+          "author": "Ray Bradbury",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/451.jpg"
+        },
+        {
+          "title": "The Handmaid’s Tale",
+          "author": "Margaret Atwood",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/handmaid.jpg"
+        },
+        {
+          "title": "The Giver",
+          "author": "Lois Lowry",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/giver.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Coming-of-Age",
+      "books": [
+        {
+          "title": "The Catcher in the Rye",
+          "author": "J.D. Salinger",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/catcher.jpg"
+        },
+        {
+          "title": "The Perks of Being a Wallflower",
+          "author": "Stephen Chbosky",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/perks.jpg"
+        },
+        {
+          "title": "The Outsiders",
+          "author": "S.E. Hinton",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/outsiders.webp"
+        },
+        {
+          "title": "Looking for Alaska",
+          "author": "John Green",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/alaska.jpg"
+        },
+        {
+          "title": "A Separate Peace",
+          "author": "John Knowles",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/separatepeace.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Environment",
+      "books": [
+        {
+          "title": "Silent Spring",
+          "author": "Rachel Carson",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/silentspring.jpg"
+        },
+        {
+          "title": "The Overstory",
+          "author": "Richard Powers",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/overstory.jpg"
+        },
+        {
+          "title": "The Sixth Extinction",
+          "author": "Elizabeth Kolbert",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/sixth.jpg"
+        },
+        {
+          "title": "Walden",
+          "author": "Henry David Thoreau",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/walden.jpg"
+        },
+        {
+          "title": "An Inconvenient Truth",
+          "author": "Al Gore",
+          "price": "12.99$",
+          "priceValue": 12.99,
+          "image": "img/inconvenient.jpg"
+        }
+      ]
+    }
+  ]
+}
