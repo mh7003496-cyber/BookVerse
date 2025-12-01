@@ -26,16 +26,24 @@ function loadProducts() {
 function escapeHtml(s) {
   return s.replace(/</g, "&lt;");
 }
+const genreMap = {
+  "fiction": ["classic literature", "historical fiction", "dystopian fiction"],
+  "romance": ["classic literature"],
+  "fantasy": ["dystopian fiction"],
+  "history": ["historical fiction", "environment"]
+};
 function renderBookList() {
   const root = document.getElementById("bookList");
   if (!root) return;
   const genre = document.getElementById("genreFilter").value;
   root.innerHTML = "";
   products.forEach(p => {
-    if (genre === "all" || p.genre.includes(genre)) {
+    if (
+  genre === "all" ||
+  (genreMap[genre] && genreMap[genre].includes(p.genre))
+) {
       let div = document.createElement("div");
       div.className = "book-item";
-
       div.innerHTML = `
         <h3>${escapeHtml(p.title)}</h3>
         <p>${p.author}</p>
@@ -47,7 +55,6 @@ function renderBookList() {
     }
   });
 }
-
 function renderHomepageBooks() {
   const container =
       document.querySelector(".book-container")

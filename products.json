@@ -6,36 +6,36 @@
         {
           "title": "The Great Gatsby",
           "author": "F. Scott Fitzgerald",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "12$",
+          "priceValue": 12,
           "image": "img/TheGreatGatsby.jpg"
         },
         {
           "title": "Pride and Prejudice",
           "author": "Jane Austen",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "17$",
+          "priceValue": 17,
           "image": "img/pride.webp"
         },
         {
           "title": "The Sea-Wolf",
           "author": "Jack London",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "11$",
+          "priceValue": 11,
           "image": "img/the-sea.webp"
         },
         {
           "title": "Jane Eyre",
           "author": "Charlotte Brontë",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "16$",
+          "priceValue": 16,
           "image": "img/jane-eyre.jpg"
         },
         {
           "title": "Wuthering Heights",
           "author": "Emily Brontë",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "16$",
+          "priceValue": 16,
           "image": "img/Heights.jpg"
         }
       ]
@@ -46,36 +46,36 @@
         {
           "title": "To Kill a Mockingbird",
           "author": "Harper Lee",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "12$",
+          "priceValue": 12,
           "image": "img/kill-bird.jpg"
         },
         {
           "title": "The Book Thief",
           "author": "Markus Zusak",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "20$",
+          "priceValue": 20,
           "image": "img/thief.jpg"
         },
         {
           "title": "All the Light We Cannot See",
           "author": "Anthony Doerr",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "10.99$",
+          "priceValue": 10.99,
           "image": "img/night.jpg"
         },
         {
           "title": "A Tale of Two Cities",
           "author": "Charles Dickens",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "13$",
+          "priceValue": 13,
           "image": "img/tale.jpg"
         },
         {
           "title": "The Kite Runner",
           "author": "Khaled Hosseini",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "14$",
+          "priceValue": 14,
           "image": "img/kite.jpg"
         }
       ]
@@ -86,15 +86,15 @@
         {
           "title": "1984",
           "author": "George Orwell",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "12$",
+          "priceValue": 12,
           "image": "img/1984.jpg"
         },
         {
           "title": "Brave New World",
           "author": "Aldous Huxley",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "11.99$",
+          "priceValue": 11.99,
           "image": "img/brave.jpg"
         },
         {
@@ -107,15 +107,15 @@
         {
           "title": "The Handmaid’s Tale",
           "author": "Margaret Atwood",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "14$",
+          "priceValue": 14,
           "image": "img/handmaid.jpg"
         },
         {
           "title": "The Giver",
           "author": "Lois Lowry",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "8$",
+          "priceValue": 8,
           "image": "img/giver.jpg"
         }
       ]
@@ -126,29 +126,29 @@
         {
           "title": "The Catcher in the Rye",
           "author": "J.D. Salinger",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "18$",
+          "priceValue": 18,
           "image": "img/catcher.jpg"
         },
         {
           "title": "The Perks of Being a Wallflower",
           "author": "Stephen Chbosky",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "16$",
+          "priceValue": 16,
           "image": "img/perks.jpg"
         },
         {
           "title": "The Outsiders",
           "author": "S.E. Hinton",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "12$",
+          "priceValue": 12,
           "image": "img/outsiders.webp"
         },
         {
           "title": "Looking for Alaska",
           "author": "John Green",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "19$",
+          "priceValue": 19,
           "image": "img/alaska.jpg"
         },
         {
@@ -173,8 +173,8 @@
         {
           "title": "The Overstory",
           "author": "Richard Powers",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "8$",
+          "priceValue": 8,
           "image": "img/overstory.jpg"
         },
         {
@@ -187,15 +187,15 @@
         {
           "title": "Walden",
           "author": "Henry David Thoreau",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "14$",
+          "priceValue": 14,
           "image": "img/walden.jpg"
         },
         {
           "title": "An Inconvenient Truth",
           "author": "Al Gore",
-          "price": "12.99$",
-          "priceValue": 12.99,
+          "price": "13.75$",
+          "priceValue": 13.75,
           "image": "img/inconvenient.jpg"
         }
       ]
